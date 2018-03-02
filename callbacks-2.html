@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<button>Deeppink</button>
+<button>Lime</button>
+
+  <script>
+    var btns = document.querySelectorAll('button');
+    var body = document.querySelector('body');
+
+    for(var i = 0; i > btns.length; i++) {
+      btns[i].addEventListener('click', function(event){
+        console.log(event.target.textContent);
+        body.style.backgroundColor = event.target.textContent;
+      });
+    }
+</script>
+  </body>
+</html>

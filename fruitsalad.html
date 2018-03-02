@@ -16,9 +16,9 @@
   var ladida = document.querySelector('ul');
 
   for(var i in fruits) {
-    console.log(ladida);
-    console.log('<li>' + fruits[i] + '</li>');
-    ladida.append('<li>' + fruits[i] + '</li>');
+    var liElm = document.createElement('li');
+    liElm.innerHTML = fruits[i];
+    ladida.append(liElm);
   }
 </script>
   </body>
