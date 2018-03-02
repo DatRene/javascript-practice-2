@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Value: <span class="value"></span></h1>
+    <h1>Length: <span class="length"></span></h1>
+    <h1>Datatype: <span class="datatype"></span></h1>
+  <script>
+  var data = prompt('Please enter your data.');
+  var value = document.querySelector('.value');
+  value.innerHTML = data;
+
+  document.querySelector('.length').innerHTML = data.length;
+
+  document.querySelector('.datatype').innerHTML = typeof(data);
+</script>
+  </body>
+</html>
