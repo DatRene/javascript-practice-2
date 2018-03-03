@@ -3,13 +3,85 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+      #box {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+
+      button {
+        background-color: deeppink;
+        color: #FFF;
+        width: 100px;
+        height: 50px;
+      }
+
+    </style>
   </head>
   <body>
-<button>size</button>
-<button>color</button>
 
-  <script>
-    
-</script>
+    <article>
+    <button onclick="newWidth()">Width</button>
+    <button onclick="newHeight()">Height</button>
+    <button onclick="newColor()">Color</button>
+    <button onclick="newOpacity()">Opacity</button>
+    <button onclick="newText()">New text</button>
+    <button onclick="newTextColor()">New text color</button>
+    <button onclick="newPosition()">New position</button>
+  </article>
+
+
+    <div id="box">
+    </div>
+
+    <script>
+
+    function newPosition() {
+      document.getElementById("box").style.top = '200px';
+    }
+
+    function newTextColor() {
+      document.getElementById("box").style.color = '#FFF';
+    }
+
+    function newText() {
+      var myText = prompt('Enter the new text.')
+      document.getElementById("box").innerHTML = myText;
+    }
+
+    function newOpacity() {
+      var myOpacity = prompt('Enter a decimal between 0.0 and 1.0.')
+      document.getElementById("box").style.opacity = myOpacity;
+    }
+
+    function newWidth() {
+      document.getElementById("box").style.width = '900px';
+    }
+
+    function newHeight() {
+      document.getElementById("box").style.height = '500px';
+    }
+
+    function newColor() {
+      document.getElementById("box").style.backgroundColor = 'deeppink';
+    }
+
+
+    /*
+    var btns = document.querySelectorAll('button');
+
+
+    for(var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function(event){
+        console.log(event.target.textContent);
+        body.style.backgroundColor = event.target.textContent;
+      });
+    }
+    */
+
+    </script>
+
   </body>
 </html>
